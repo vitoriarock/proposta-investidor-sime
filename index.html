@@ -393,8 +393,35 @@ nav a:hover, nav a.active {
   background: var(--green-deep);
 }
 .page--pale {
-  background: #EEF4F0;
+  background: var(--green-pale);   /* #D6E8DC — verde sálvia claro */
 }
+.page--cream-dark {
+  background: var(--cream-dark);   /* #EDE9E0 — creme acinzentado */
+}
+.page--soft {
+  background: var(--green-soft);   /* #4A7C5F — verde médio com texto branco */
+}
+
+/* SEÇÕES SOFT (verde médio): textos brancos */
+.page--soft .section-title { color: rgba(255,255,255,0.4); }
+.page--soft .section-heading { color: var(--white); }
+.page--soft .section-body { color: rgba(255,255,255,0.75); font-weight: 300; }
+.page--soft .section-body strong { color: var(--white); }
+.page--soft .metric-num { color: var(--green-pale); }
+.page--soft .metrics-hero { border-color: rgba(255,255,255,0.15); }
+.page--soft .callout { border-left-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.8); opacity: 1; }
+.page--soft .bullets-list li { color: rgba(255,255,255,0.75); }
+.page--soft .block-item { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.12); }
+.page--soft .block-label { color: var(--green-pale); }
+.page--soft .page-band { background: rgba(0,0,0,0.18); }
+.page--soft .section-rule { background: rgba(255,255,255,0.2); opacity: 1; }
+.page--soft .page-footer { border-top-color: rgba(255,255,255,0.08); color: rgba(255,255,255,0.22); }
+.page--soft .data-table thead th { background: rgba(0,0,0,0.25); color: rgba(255,255,255,0.7); }
+.page--soft .data-table tbody tr { border-bottom-color: rgba(255,255,255,0.08); }
+.page--soft .data-table tbody td { color: rgba(255,255,255,0.75); }
+.page--soft .data-table .highlight td { color: var(--white); }
+.page--soft .data-table .highlight .hl-val { color: var(--green-pale); }
+
 
 /* BAND: faixa superior colorida em cada seção */
 .page-band {

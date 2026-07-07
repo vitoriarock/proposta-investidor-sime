@@ -240,10 +240,11 @@ nav a:hover, nav a.active {
 
 /* ── SCENARIOS ───────────────────────────── */
 .scenario-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  display: grid; grid-template-columns: repeat(4, minmax(105px, 1fr)); gap: 0;
   margin: 1.5rem 0; border: 1px solid var(--ltgray);
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
 }
-.scenario-col { }
+.scenario-col { min-width: 105px; }
 .scenario-header {
   padding: 0.75rem 1rem;
   font-size: 0.54rem; font-weight: 600; letter-spacing: 0.14em;
@@ -399,7 +400,7 @@ nav a:hover, nav a.active {
   background: var(--green-deep);
 }
 .page--pale {
-  background: var(--green-pale);   /* #D6E8DC — verde sálvia claro */
+  background: #E5DDD0;   /* Areia Quente — neutro biofílico */
 }
 .page--cream-dark {
   background: var(--cream-dark);   /* #EDE9E0 — creme acinzentado */
@@ -479,6 +480,11 @@ nav a:hover, nav a.active {
 .page--dark .data-table .highlight .hl-val { color: var(--sage); }
 .page--dark .data-table tfoot tr { background: rgba(156,171,132,0.12); }
 .page--dark .data-table tfoot td { color: var(--sage); border-top-color: rgba(255,255,255,0.1); }
+.page--dark .scenario-row { color: rgba(255,255,255,0.80); }
+.page--dark .scenario-row.label { color: rgba(255,255,255,0.45); font-size:0.68rem; }
+.page--dark .scenario-row.value-big { color: var(--sage); font-weight:700; }
+.page--dark .scenario-header { background: rgba(0,0,0,0.38); color: rgba(255,255,255,0.75); }
+.page--dark .scenario-header.highlight { background: var(--terracota); color: #fff; }
 /* SEÇÕES TINTADAS: ajustes menores */
 .page--pale .page-footer { border-top-color: rgba(0,0,0,0.08); }
 .page--pale .metrics-hero { border-color: rgba(45,90,63,0.15); }
@@ -538,7 +544,7 @@ nav a:hover, nav a.active {
   .two-col, .scp-grid, .valuation-grid { grid-template-columns: 1fr; }
   .metrics-hero { grid-template-columns: 1fr; }
   .metric-block { border-right: none; border-bottom: 1px solid var(--ltgray); }
-  .scenario-grid { grid-template-columns: 1fr 1fr; }
+  /* scenario-grid mantém 4 cols com scroll horizontal no mobile */
   .cover-grid { grid-template-columns: 1fr; }
   .fatia-grid { grid-template-columns: 1fr; }
   /* Tabelas: scroll horizontal em tela pequena */

@@ -392,7 +392,7 @@ nav a:hover, nav a.active {
 .page--dark {
   background: var(--green-deep);
 }
-.page--tinted {
+.page--pale {
   background: #EEF4F0;
 }
 
@@ -436,18 +436,21 @@ nav a:hover, nav a.active {
 .page--dark .bullets-list li strong { color: var(--white); }
 
 /* SEÇÕES TINTADAS: ajustes menores */
-.page--tinted .page-footer { border-top-color: rgba(0,0,0,0.08); }
-.page--tinted .metrics-hero { border-color: rgba(45,90,63,0.15); }
-.page--tinted .metric-block { border-right-color: rgba(45,90,63,0.15); }
-.page--tinted .data-table tbody tr { border-bottom-color: rgba(45,90,63,0.1); }
-.page--tinted .block-item { border-color: rgba(45,90,63,0.15); }
-.page--tinted .scp-box { border-color: rgba(45,90,63,0.15); }
-.page--tinted .two-col .block-item { border-color: rgba(45,90,63,0.15); }
-.page--tinted .scenario-grid { border-color: rgba(45,90,63,0.15); }
-.page--tinted .scenario-row { border-color: rgba(45,90,63,0.12); }
+.page--pale .page-footer { border-top-color: rgba(0,0,0,0.08); }
+.page--pale .metrics-hero { border-color: rgba(45,90,63,0.15); }
+.page--pale .metric-block { border-right-color: rgba(45,90,63,0.15); }
+.page--pale .data-table tbody tr { border-bottom-color: rgba(45,90,63,0.1); }
+.page--pale .block-item { border-color: rgba(45,90,63,0.15); }
+.page--pale .scp-box { border-color: rgba(45,90,63,0.15); }
+.page--pale .two-col .block-item { border-color: rgba(45,90,63,0.15); }
+.page--pale .scenario-grid { border-color: rgba(45,90,63,0.15); }
+.page--pale .scenario-row { border-color: rgba(45,90,63,0.12); }
 
-/* Metric-block em seções tintadas: fundo accent */
-.page--tinted .metric-num { color: var(--green-deep); }
+/* Seções verde pálido */
+.page--pale .section-title { color: var(--green-soft); }
+.page--pale .section-heading { color: var(--green-deep); }
+.page--pale .metric-num { color: var(--green-deep); }
+.page--pale .callout { border-left-color: var(--green-soft); background: rgba(30,61,47,0.06); }
 
 /* Hero-num em dark sections */
 .page--dark .hero-num { color: #7EC8A0; }
@@ -647,7 +650,7 @@ nav a:hover, nav a.active {
 <!-- ══════════════════════════════════════════════════════════
      PÁG 4 · O NEGÓCIO
 ══════════════════════════════════════════════════════════ -->
-<div id="negocio" class="page page--section page--tinted">
+<div id="negocio" class="page page--section page--pale">
   <div class="page-band"><span class="page-band-label">SIME · O Negócio</span><span class="page-band-num">Pág. 3</span></div>
   <div class="page-inner">
     <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
@@ -698,7 +701,7 @@ nav a:hover, nav a.active {
 <!-- ══════════════════════════════════════════════════════════
      PÁG 5 · O MERCADO
 ══════════════════════════════════════════════════════════ -->
-<div id="mercado" class="page page--section">
+<div id="mercado" class="page page--section page--cream-dark">
   <div class="page-band"><span class="page-band-label">SIME · O Mercado</span><span class="page-band-num">Pág. 4</span></div>
   <div class="page-inner">
     <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
@@ -763,7 +766,7 @@ nav a:hover, nav a.active {
 <!-- ══════════════════════════════════════════════════════════
      PÁG 6 · OS NÚMEROS — INVESTIMENTO E CUSTO
 ══════════════════════════════════════════════════════════ -->
-<div id="numeros" class="page page--section page--tinted">
+<div id="numeros" class="page page--section page--pale">
   <div class="page-band"><span class="page-band-label">SIME · Os Números · Investimento e Custo</span><span class="page-band-num">Pág. 5</span></div>
   <div class="page-inner">
     <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
@@ -905,7 +908,7 @@ nav a:hover, nav a.active {
 <!-- ══════════════════════════════════════════════════════════
      PÁG 8 · ANÁLISE — PRIMEIRO ANO
 ══════════════════════════════════════════════════════════ -->
-<div id="ano1" class="page page--section page--tinted">
+<div id="ano1" class="page page--section page--soft">
   <div class="page-band"><span class="page-band-label">SIME · Análise · Primeiro Ano</span><span class="page-band-num">Pág. 7</span></div>
   <div class="page-inner">
     <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
@@ -959,7 +962,7 @@ nav a:hover, nav a.active {
 <!-- ══════════════════════════════════════════════════════════
      PÁG 9 · ANÁLISE — MATURIDADE
 ══════════════════════════════════════════════════════════ -->
-<div id="maturidade" class="page page--section">
+<div id="maturidade" class="page page--section page--cream-dark">
   <div class="page-band"><span class="page-band-label">SIME · Análise · Maturidade</span><span class="page-band-num">Pág. 8</span></div>
   <div class="page-inner">
     <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
@@ -1012,7 +1015,7 @@ nav a:hover, nav a.active {
 <!-- ══════════════════════════════════════════════════════════
      PÁG 10 · QUANTO VALE A SIME
 ══════════════════════════════════════════════════════════ -->
-<div id="valuation" class="page page--section page--tinted">
+<div id="valuation" class="page page--section page--pale">
   <div class="page-band"><span class="page-band-label">SIME · Quanto Vale a SIME</span><span class="page-band-num">Pág. 9</span></div>
   <div class="page-inner">
     <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
@@ -1213,7 +1216,7 @@ nav a:hover, nav a.active {
 <!-- ══════════════════════════════════════════════════════════
      PÁG 13 · TRANSPARÊNCIA
 ══════════════════════════════════════════════════════════ -->
-<div id="riscos" class="page page--section page--tinted">
+<div id="riscos" class="page page--section page--cream-dark">
   <div class="page-band"><span class="page-band-label">SIME · Transparência · Riscos e Próximos Passos</span><span class="page-band-num">Pág. 12</span></div>
   <div class="page-inner">
     <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>

@@ -241,12 +241,12 @@ nav a:hover, nav a.active {
 /* ── SCENARIO TABLE ─────────────────────── */
 .scenario-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; }
 .scenario-table {
-  width: 100%; border-collapse: collapse; min-width: 400px;
+  width: 100%; border-collapse: collapse; min-width: 580px;
   border: 1px solid var(--ltgray); table-layout: fixed;
 }
 .scenario-table thead th {
-  padding: 0.8rem 1rem; text-align: center;
-  font-size: 0.52rem; font-weight: 700; letter-spacing: 0.05em;
+  padding: 0.6rem 0.4rem; text-align: center;
+  font-size: 0.46rem; font-weight: 700; letter-spacing: 0.04em;
   text-transform: uppercase; background: var(--green-deep);
   color: rgba(255,255,255,0.82); border-right: 1px solid rgba(255,255,255,0.12);
 }
@@ -254,15 +254,15 @@ nav a:hover, nav a.active {
 .scenario-table thead th:last-child { border-right: none; }
 .scenario-table thead th.highlight { background: var(--terracota); color: #fff; }
 .scenario-table td {
-  padding: 0.7rem 1rem; font-size: 0.76rem; font-weight: 300;
-  color: var(--charcoal); text-align: center;
+  padding: 0.7rem 0.7rem; font-size: 0.76rem; font-weight: 300;
+  color: var(--charcoal); text-align: center; white-space: nowrap;
   border-right: 1px solid var(--ltgray); border-bottom: 1px solid var(--ltgray);
 }
 .scenario-table td:first-child { text-align: left; }
 .scenario-table td:last-child { border-right: none; }
 .scenario-table tbody tr:last-child td { border-bottom: none; }
 .scenario-table td.label { color: var(--gray); font-size: 0.68rem; }
-.scenario-table td.value-big { font-size: 1rem; font-weight: 700; color: var(--terracota); }
+.scenario-table td.value-big { font-size: 0.92rem; font-weight: 700; color: var(--terracota); white-space: nowrap; }
 
 /* ── VALUATION ─────────────────────────── */
 .valuation-grid {

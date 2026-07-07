@@ -245,26 +245,7 @@ nav a:hover, nav a.active {
   overflow-x: auto; -webkit-overflow-scrolling: touch;
 }
 .scenario-col { min-width: 105px; }
-.scenario-header {
-  padding: 0.75rem 1rem;
-  font-size: 0.54rem; font-weight: 600; letter-spacing: 0.14em;
-  text-transform: uppercase; color: rgba(255,255,255,0.8);
-  background: var(--green-deep);
-  border-right: 1px solid rgba(255,255,255,0.1);
-}
-.scenario-header.highlight { background: var(--green-mid); }
-.scenario-row {
-  padding: 0.6rem 1rem; font-size: 0.76rem; font-weight: 300;
-  color: #444; border-right: 1px solid var(--ltgray);
-  border-bottom: 1px solid var(--ltgray);
-}
-.scenario-row.label { color: var(--gray); font-size: 0.7rem; }
-.scenario-row.value-big {
-  font-family:'Montserrat',sans-serif;
-  font-size: 1rem; font-weight: 700; color: var(--green-mid);
-}
-.scenario-col:last-child .scenario-header,
-.scenario-col:last-child .scenario-row { border-right: none; }
+/* legacy scenario rules removed — uses scenario-table now */
 
 /* ── VALUATION ─────────────────────────── */
 .valuation-grid {
@@ -480,11 +461,11 @@ nav a:hover, nav a.active {
 .page--dark .data-table .highlight .hl-val { color: var(--sage); }
 .page--dark .data-table tfoot tr { background: rgba(156,171,132,0.12); }
 .page--dark .data-table tfoot td { color: var(--sage); border-top-color: rgba(255,255,255,0.1); }
-.page--dark .scenario-row { color: rgba(255,255,255,0.80); }
-.page--dark .scenario-row.label { color: rgba(255,255,255,0.45); font-size:0.68rem; }
-.page--dark .scenario-row.value-big { color: var(--sage); font-weight:700; }
-.page--dark .scenario-header { background: rgba(0,0,0,0.38); color: rgba(255,255,255,0.75); }
-.page--dark .scenario-header.highlight { background: var(--terracota); color: #fff; }
+.page--dark .scenario-table thead th { background: rgba(0,0,0,0.38); color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.08); }
+.page--dark .scenario-table thead th.highlight { background: var(--terracota); color: #fff; }
+.page--dark .scenario-table td { color: rgba(255,255,255,0.82); border-color: rgba(255,255,255,0.08); }
+.page--dark .scenario-table td.label { color: rgba(255,255,255,0.42); }
+.page--dark .scenario-table td.value-big { color: var(--sage); }
 /* SEÇÕES TINTADAS: ajustes menores */
 .page--pale .page-footer { border-top-color: rgba(0,0,0,0.08); }
 .page--pale .metrics-hero { border-color: rgba(45,90,63,0.15); }
@@ -976,35 +957,41 @@ nav a:hover, nav a.active {
 
     <div class="section-title" style="margin-top:1.5rem">Somando as três fontes de receita, o primeiro ano fecha assim:</div>
 
-    <div class="scenario-grid">
-      <div class="scenario-col">
-        <div class="scenario-header">Indicador</div>
-        <div class="scenario-row label">Receita do ano</div>
-        <div class="scenario-row label">Resultado do ano</div>
-        <div class="scenario-row label">Resultado mensal positivo</div>
-        <div class="scenario-row label">Turnos sublocados no mês 12</div>
-      </div>
-      <div class="scenario-col">
-        <div class="scenario-header">Conservador</div>
-        <div class="scenario-row">R$ 136.534</div>
-        <div class="scenario-row">R$ 22.959</div>
-        <div class="scenario-row">Mês 3</div>
-        <div class="scenario-row">20 turnos</div>
-      </div>
-      <div class="scenario-col">
-        <div class="scenario-header highlight">Base</div>
-        <div class="scenario-row value-big">R$ 155.509</div>
-        <div class="scenario-row value-big">R$ 40.701</div>
-        <div class="scenario-row" style="color:var(--green-mid);font-weight:500">Mês 2</div>
-        <div class="scenario-row" style="color:var(--green-mid);font-weight:500">26 turnos</div>
-      </div>
-      <div class="scenario-col">
-        <div class="scenario-header">Otimista</div>
-        <div class="scenario-row">R$ 183.334</div>
-        <div class="scenario-row">R$ 61.917</div>
-        <div class="scenario-row">Mês 1</div>
-        <div class="scenario-row">36 turnos</div>
-      </div>
+    <div class="scenario-table-wrap">
+    <table class="scenario-table">
+      <thead><tr>
+        <th>Indicador</th>
+        <th>Conservador</th>
+        <th class="highlight">Base</th>
+        <th>Otimista</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="label">Receita do ano</td>
+          <td>R$ 136.534</td>
+          <td class="value-big">R$ 155.509</td>
+          <td>R$ 183.334</td>
+        </tr>
+        <tr>
+          <td class="label">Resultado do ano</td>
+          <td>R$ 22.959</td>
+          <td class="value-big">R$ 40.701</td>
+          <td>R$ 61.917</td>
+        </tr>
+        <tr>
+          <td class="label">Resultado mensal positivo</td>
+          <td>Mês 3</td>
+          <td style="color:var(--terracota);font-weight:600">Mês 2</td>
+          <td>Mês 1</td>
+        </tr>
+        <tr>
+          <td class="label">Turnos sublocados no mês 12</td>
+          <td>20 turnos</td>
+          <td style="color:var(--terracota);font-weight:600">26 turnos</td>
+          <td>36 turnos</td>
+        </tr>
+      </tbody>
+    </table>
     </div>
 
     <p class="section-body" style="margin-top:1.25rem">Todos os cenários fecham o primeiro ano no positivo, algo raro em um negócio recém-aberto. O motivo é a agenda clínica da Sarah, que gera caixa de alta margem desde o mês 1, enquanto a sublocação amadurece.</p>

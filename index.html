@@ -17,18 +17,24 @@ body {
 }
 
 :root {
-  --green-deep:  #1E3D2F;
-  --green-mid:   #2D5A3F;
-  --green-soft:  #4A7C5F;
-  --green-pale:  #D6E8DC;
-  --cream:       #F7F3EC;
-  --cream-dark:  #EDE9E0;
-  --white:       #FFFFFF;
-  --charcoal:    #2C2C2C;
-  --gray:        #6B6B6B;
-  --ltgray:      #C8C4BB;
-  --amber:       #92400E;
-  --amber-bg:    #FEF3C7;
+  /* Paleta oficial SIME — Branding v1.3 jul/2026 */
+  --cream:        #FAF7F1;   /* base dominante — fundos claros */
+  --cream-dark:   #EDE6D6;   /* creme mais escuro */
+  --sage:         #9CAB84;   /* Verde Sálvia — identidade nº 1 */
+  --wood:         #CDA97E;   /* Madeira Clara — calor e textura */
+  --terracota:    #BE7455;   /* Terracota — destaques e chamadas */
+  --green-leaf:   #6E8F6B;   /* Verde Folha */
+  --green-deep:   #2E4A3B;   /* Verde Mata — contraste e profundidade */
+  /* aliases retrocompatibilidade */
+  --green-mid:    #BE7455;
+  --green-soft:   #BE7455;
+  --green-pale:   #9CAB84;
+  --white:        #FFFFFF;
+  --charcoal:     #2C2C2C;
+  --gray:         #6B6B6B;
+  --ltgray:       #C8C4BB;
+  --amber:        #92400E;
+  --amber-bg:     #FEF3C7;
 }
 
 /* NAV */
@@ -225,7 +231,7 @@ nav a:hover, nav a.active {
   padding: 0.65rem 1rem; color: #444; font-weight: 300; line-height: 1.4;
 }
 .data-table tbody td:first-child { font-weight: 500; color: var(--charcoal); }
-.data-table tfoot tr { background: rgba(45,90,63,0.08); }
+.data-table tfoot tr { background: rgba(190,116,85,0.07); }
 .data-table tfoot td {
   padding: 0.75rem 1rem; font-weight: 600; color: var(--green-mid);
   font-size: 0.82rem; border-top: 1px solid var(--green-pale);
@@ -309,7 +315,7 @@ nav a:hover, nav a.active {
 }
 .retorno-table td:first-child { text-align: left; font-weight: 500; color: var(--charcoal); }
 .retorno-table tr:last-child td {
-  background: rgba(45,90,63,0.08); font-weight: 600;
+  background: rgba(190,116,85,0.07); font-weight: 600;
   color: var(--green-mid); border-top: 1px solid var(--green-pale);
 }
 
@@ -377,8 +383,8 @@ nav a:hover, nav a.active {
 .fatia-fund { font-size: 0.7rem; color: var(--gray); }
 
 .callout {
-  border-left: 3px solid var(--green-soft);
-  background: var(--green-pale); opacity: 0.8;
+  border-left: 3px solid var(--terracota);
+  background: rgba(250,247,241,0.75); opacity: 1;
   padding: 1rem 1.2rem; margin: 1.5rem 0;
   font-size: 0.82rem; color: var(--charcoal); line-height: 1.7; font-weight: 400;
   font-style: italic;
@@ -399,28 +405,28 @@ nav a:hover, nav a.active {
   background: var(--cream-dark);   /* #EDE9E0 — creme acinzentado */
 }
 .page--soft {
-  background: var(--green-soft);   /* #4A7C5F — verde médio com texto branco */
+  background: var(--wood);   /* #CDA97E — Madeira Clara (Valuation) */
 }
 
-/* SEÇÕES SOFT (verde médio): textos brancos */
-.page--soft .section-title { color: rgba(255,255,255,0.4); }
-.page--soft .section-heading { color: var(--white); }
-.page--soft .section-body { color: rgba(255,255,255,0.75); font-weight: 300; }
-.page--soft .section-body strong { color: var(--white); }
-.page--soft .metric-num { color: var(--green-pale); }
-.page--soft .metrics-hero { border-color: rgba(255,255,255,0.15); }
-.page--soft .callout { border-left-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.8); opacity: 1; }
-.page--soft .bullets-list li { color: rgba(255,255,255,0.75); }
-.page--soft .block-item { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.12); }
-.page--soft .block-label { color: var(--green-pale); }
-.page--soft .page-band { background: rgba(0,0,0,0.18); }
-.page--soft .section-rule { background: rgba(255,255,255,0.2); opacity: 1; }
-.page--soft .page-footer { border-top-color: rgba(255,255,255,0.08); color: rgba(255,255,255,0.22); }
-.page--soft .data-table thead th { background: rgba(0,0,0,0.25); color: rgba(255,255,255,0.7); }
-.page--soft .data-table tbody tr { border-bottom-color: rgba(255,255,255,0.08); }
-.page--soft .data-table tbody td { color: rgba(255,255,255,0.75); }
-.page--soft .data-table .highlight td { color: var(--white); }
-.page--soft .data-table .highlight .hl-val { color: var(--green-pale); }
+/* SEÇÕES SOFT (Madeira Clara #CDA97E — Valuation): texto escuro */
+.page--soft .section-title { color: rgba(46,74,59,0.55); }
+.page--soft .section-heading { color: var(--green-deep); }
+.page--soft .section-body { color: var(--charcoal); font-weight: 300; }
+.page--soft .section-body strong { color: var(--green-deep); }
+.page--soft .metric-num { color: var(--green-deep); }
+.page--soft .metrics-hero { border-color: rgba(46,74,59,0.2); }
+.page--soft .callout { border-left-color: var(--terracota); background: rgba(255,255,255,0.3); color: var(--charcoal); opacity: 1; }
+.page--soft .bullets-list li { color: var(--charcoal); }
+.page--soft .bullets-list li::before { color: var(--green-deep); }
+.page--soft .block-item { background: rgba(255,255,255,0.35); border-color: rgba(46,74,59,0.15); }
+.page--soft .block-label { color: var(--green-deep); }
+.page--soft .page-band { background: rgba(0,0,0,0.14); }
+.page--soft .section-rule { background: var(--terracota); opacity: 0.45; }
+.page--soft .page-footer { border-top-color: rgba(46,74,59,0.12); color: rgba(46,74,59,0.4); }
+.page--soft .val-item { background: rgba(255,255,255,0.35); border-color: rgba(46,74,59,0.15); }
+.page--soft .val-method { color: rgba(46,74,59,0.5); }
+.page--soft .val-result { color: var(--green-deep); }
+.page--soft .val-desc { color: var(--charcoal); }
 
 
 /* BAND: faixa superior colorida em cada seção */
@@ -448,7 +454,7 @@ nav a:hover, nav a.active {
 .page--dark .page-footer { border-top-color: rgba(255,255,255,0.08); color: rgba(255,255,255,0.22); }
 .page--dark .metrics-hero { border-color: rgba(255,255,255,0.1); }
 .page--dark .metric-block { border-right-color: rgba(255,255,255,0.1); }
-.page--dark .metric-num { color: #7EC8A0; }
+.page--dark .metric-num { color: var(--sage); }
 .page--dark .metric-label { color: rgba(255,255,255,0.5); }
 .page--dark .metric-label strong { color: rgba(255,255,255,0.75); }
 .page--dark .callout {
@@ -459,9 +465,20 @@ nav a:hover, nav a.active {
 }
 .page--dark .obs { color: rgba(255,255,255,0.35); }
 .page--dark .bullets-list li { border-bottom-color: rgba(255,255,255,0.08); color: rgba(255,255,255,0.68); }
-.page--dark .bullets-list li::before { color: #7EC8A0; }
+.page--dark .bullets-list li::before { color: var(--sage); }
 .page--dark .bullets-list li strong { color: var(--white); }
 
+
+/* Tabelas em seções escuras */
+.page--dark .data-table thead th { background: rgba(0,0,0,0.28); color: rgba(255,255,255,0.75); }
+.page--dark .data-table tbody tr { border-bottom-color: rgba(255,255,255,0.07); }
+.page--dark .data-table tbody td { color: rgba(255,255,255,0.72); }
+.page--dark .data-table tbody td:first-child { color: rgba(255,255,255,0.9); font-weight: 500; }
+.page--dark .data-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.03); }
+.page--dark .data-table .highlight td { color: var(--white); font-weight: 600; }
+.page--dark .data-table .highlight .hl-val { color: var(--sage); }
+.page--dark .data-table tfoot tr { background: rgba(156,171,132,0.12); }
+.page--dark .data-table tfoot td { color: var(--sage); border-top-color: rgba(255,255,255,0.1); }
 /* SEÇÕES TINTADAS: ajustes menores */
 .page--pale .page-footer { border-top-color: rgba(0,0,0,0.08); }
 .page--pale .metrics-hero { border-color: rgba(45,90,63,0.15); }
@@ -477,10 +494,10 @@ nav a:hover, nav a.active {
 .page--pale .section-title { color: var(--green-soft); }
 .page--pale .section-heading { color: var(--green-deep); }
 .page--pale .metric-num { color: var(--green-deep); }
-.page--pale .callout { border-left-color: var(--green-soft); background: rgba(30,61,47,0.06); }
+.page--pale .callout { border-left-color: var(--terracota); background: rgba(255,255,255,0.28); color: var(--green-deep); opacity: 1; }
 
 /* Hero-num em dark sections */
-.page--dark .hero-num { color: #7EC8A0; }
+.page--dark .hero-num { color: var(--sage); }
 
 
 /* Proposta e Essencial em fundo escuro: ajustar caixas internas */
@@ -488,7 +505,7 @@ nav a:hover, nav a.active {
   background: rgba(255,255,255,0.06);
   border-color: rgba(255,255,255,0.1);
 }
-.page--dark .scp-role { color: #7EC8A0; }
+.page--dark .scp-role { color: var(--sage); }
 .page--dark .scp-name { color: var(--white); }
 .page--dark .scp-desc { color: rgba(255,255,255,0.65); }
 .page--dark .fatia-item {
@@ -496,20 +513,20 @@ nav a:hover, nav a.active {
   border-color: rgba(255,255,255,0.08);
 }
 .page--dark .fatia-val { color: var(--white); }
-.page--dark .fatia-inv { color: #7EC8A0; }
+.page--dark .fatia-inv { color: var(--sage); }
 .page--dark .fatia-fund { color: rgba(255,255,255,0.4); }
 .page--dark .two-col .block-item {
   background: rgba(255,255,255,0.05);
   border-color: rgba(255,255,255,0.08);
 }
-.page--dark .block-label { color: #7EC8A0; }
+.page--dark .block-label { color: var(--sage); }
 .page--dark .block-body { color: rgba(255,255,255,0.68); }
 .page--dark .block-body strong { color: var(--white); }
 .page--dark .hero-faixa {
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.1);
 }
-.page--dark .hero-num { color: #7EC8A0; }
+.page--dark .hero-num { color: var(--sage); }
 /* Mobile band */
 @media (max-width: 680px) {
   .page-band { padding: 0.75rem 1.2rem; }
@@ -524,6 +541,13 @@ nav a:hover, nav a.active {
   .scenario-grid { grid-template-columns: 1fr 1fr; }
   .cover-grid { grid-template-columns: 1fr; }
   .fatia-grid { grid-template-columns: 1fr; }
+  /* Tabelas: scroll horizontal em tela pequena */
+  .data-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; min-width: 100%; }
+  .retorno-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .risk-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .data-table thead, .data-table tbody, .data-table tfoot,
+  .retorno-table thead, .retorno-table tbody,
+  .risk-table thead, .risk-table tbody { display: table; width: 100%; min-width: 440px; }
 }
 </style>
 </head>
@@ -935,7 +959,7 @@ nav a:hover, nav a.active {
 <!-- ══════════════════════════════════════════════════════════
      PÁG 8 · ANÁLISE — PRIMEIRO ANO
 ══════════════════════════════════════════════════════════ -->
-<div id="ano1" class="page page--section page--soft">
+<div id="ano1" class="page page--section page--dark">
   <div class="page-band"><span class="page-band-label">SIME · Análise · Primeiro Ano</span><span class="page-band-num">Pág. 7</span></div>
   <div class="page-inner">
     <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
@@ -1042,7 +1066,7 @@ nav a:hover, nav a.active {
 <!-- ══════════════════════════════════════════════════════════
      PÁG 10 · QUANTO VALE A SIME
 ══════════════════════════════════════════════════════════ -->
-<div id="valuation" class="page page--section page--pale">
+<div id="valuation" class="page page--section page--soft">
   <div class="page-band"><span class="page-band-label">SIME · Quanto Vale a SIME</span><span class="page-band-num">Pág. 9</span></div>
   <div class="page-inner">
     <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>

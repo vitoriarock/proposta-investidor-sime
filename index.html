@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta ao Investidor · SIME · Centro de Saúde Integrada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #1c1c1c;
+  color: #2C2C2C;
+}
+
+:root {
+  --green-deep:  #1E3D2F;
+  --green-mid:   #2D5A3F;
+  --green-soft:  #4A7C5F;
+  --green-pale:  #D6E8DC;
+  --cream:       #F7F3EC;
+  --cream-dark:  #EDE9E0;
+  --white:       #FFFFFF;
+  --charcoal:    #2C2C2C;
+  --gray:        #6B6B6B;
+  --ltgray:      #C8C4BB;
+  --amber:       #92400E;
+  --amber-bg:    #FEF3C7;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--green-deep);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 0 1.5rem;
+  display: flex; align-items: center; height: 44px;
+  overflow-x: auto; scrollbar-width: none; gap: 0;
+}
+nav::-webkit-scrollbar { display: none; }
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; font-weight: 400; letter-spacing: 0.24em;
+  color: rgba(255,255,255,0.6);
+  white-space: nowrap; margin-right: 1.75rem; flex-shrink: 0;
+}
+nav a {
+  font-size: 0.56rem; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(255,255,255,0.38);
+  text-decoration: none; padding: 0 0.65rem; height: 44px;
+  line-height: 44px; white-space: nowrap; flex-shrink: 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+nav a:hover, nav a.active {
+  color: rgba(255,255,255,0.88);
+  border-color: rgba(255,255,255,0.35);
+}
+
+/* WRAPPER */
+.wrapper {
+  max-width: 920px; margin: 2rem auto;
+  display: flex; flex-direction: column; gap: 3px;
+}
+
+/* PAGE BASE */
+.page { width: 100%; overflow: hidden; }
+
+/* ── CAPA ─────────────────────────────── */
+.page--cover {
+  background: var(--green-deep);
+  min-height: 520px; position: relative;
+}
+.cover-inner { padding: 3.5rem; }
+.cover-eyebrow {
+  font-size: 0.54rem; font-weight: 500; letter-spacing: 0.28em;
+  text-transform: uppercase; color: rgba(255,255,255,0.38);
+  margin-bottom: 3rem;
+}
+.cover-sime {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 300;
+  letter-spacing: 0.45em; color: var(--white);
+  line-height: 1; margin-bottom: 0.5rem;
+}
+.cover-subtitle {
+  font-size: 0.6rem; font-weight: 400; letter-spacing: 0.18em;
+  text-transform: uppercase; color: rgba(255,255,255,0.4);
+  margin-bottom: 2.5rem;
+}
+.cover-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 300;
+  font-style: italic; line-height: 1.25; color: rgba(255,255,255,0.85);
+  margin-bottom: 1rem; max-width: 560px;
+}
+.cover-desc {
+  font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.75;
+  font-weight: 300; max-width: 540px; margin-bottom: 3rem;
+}
+.cover-rule { width: 100%; height: 1px; background: rgba(255,255,255,0.08); margin-bottom: 2rem; }
+.cover-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem 2.5rem;
+}
+.cover-item {}
+.cover-label {
+  font-size: 0.5rem; font-weight: 600; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--green-soft); margin-bottom: 0.25rem;
+}
+.cover-value {
+  font-size: 0.82rem; color: rgba(255,255,255,0.72); font-weight: 300; line-height: 1.5;
+}
+.cover-highlight { color: var(--white); font-weight: 500; }
+.cover-footer {
+  margin-top: 3rem; padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  font-size: 0.5rem; font-weight: 400; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(255,255,255,0.18);
+  display: flex; justify-content: space-between;
+}
+
+/* ── SEÇÕES CONTEÚDO ───────────────────── */
+.page--section { background: var(--cream); }
+.page-inner { padding: 3.5rem 3.5rem 2.5rem; }
+
+.page-header {
+  font-size: 0.5rem; font-weight: 500; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--green-soft);
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 0.56rem; font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--green-soft); margin-bottom: 0.5rem;
+}
+.section-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 400;
+  line-height: 1.2; color: var(--charcoal); margin-bottom: 0.5rem;
+}
+.section-rule {
+  width: 36px; height: 1px; background: var(--green-soft); opacity: 0.5;
+  margin: 0.85rem 0 1.25rem;
+}
+.section-body {
+  font-size: 0.84rem; color: #444; line-height: 1.75; font-weight: 300;
+  margin-bottom: 0.75rem;
+}
+.section-body strong { color: var(--charcoal); font-weight: 600; }
+
+.page-footer {
+  margin-top: 2.5rem; padding-top: 0.85rem;
+  border-top: 1px solid var(--ltgray);
+  font-size: 0.5rem; font-weight: 400; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gray);
+  display: flex; justify-content: space-between;
+}
+
+/* ── MÉTRICAS HERO ─────────────────────── */
+.metrics-hero {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+  margin: 2rem 0; border: 1px solid var(--ltgray);
+}
+.metric-block {
+  padding: 1.5rem 1.2rem; text-align: center;
+  border-right: 1px solid var(--ltgray);
+}
+.metric-block:last-child { border-right: none; }
+.metric-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 400;
+  color: var(--green-mid); line-height: 1; margin-bottom: 0.5rem;
+}
+.metric-label {
+  font-size: 0.72rem; color: var(--gray); line-height: 1.4; font-weight: 300;
+}
+.metric-label strong { color: var(--charcoal); font-weight: 500; display: block; font-size: 0.76rem; }
+
+/* ── BLOCOS ─────────────────────────────── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1.5rem 0; }
+.block-item {
+  padding: 1.2rem; border: 1px solid var(--ltgray);
+  margin: -1px 0 0 -1px;
+}
+.block-label {
+  font-size: 0.56rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--green-mid); margin-bottom: 0.4rem;
+}
+.block-body { font-size: 0.8rem; color: #444; line-height: 1.65; font-weight: 300; }
+.block-body strong { color: var(--charcoal); font-weight: 600; }
+
+.bullets-list { list-style: none; margin: 1rem 0; }
+.bullets-list li {
+  display: flex; gap: 0.75rem;
+  padding: 0.55rem 0; border-bottom: 1px solid var(--ltgray);
+  font-size: 0.82rem; color: #444; line-height: 1.6; font-weight: 300;
+}
+.bullets-list li:last-child { border-bottom: none; }
+.bullets-list li::before {
+  content: '·'; color: var(--green-soft); font-size: 1.4rem;
+  line-height: 1.2; flex-shrink: 0;
+}
+.bullets-list li strong { color: var(--charcoal); font-weight: 600; }
+
+/* ── TABELAS ─────────────────────────────── */
+.data-table {
+  width: 100%; border-collapse: collapse;
+  margin: 1.5rem 0; font-size: 0.78rem;
+}
+.data-table thead tr {
+  background: var(--green-deep);
+  color: rgba(255,255,255,0.85);
+}
+.data-table thead th {
+  padding: 0.7rem 1rem; text-align: left;
+  font-size: 0.52rem; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.data-table tbody tr { border-bottom: 1px solid var(--cream-dark); }
+.data-table tbody tr:nth-child(even) { background: rgba(0,0,0,0.02); }
+.data-table tbody td {
+  padding: 0.65rem 1rem; color: #444; font-weight: 300; line-height: 1.4;
+}
+.data-table tbody td:first-child { font-weight: 500; color: var(--charcoal); }
+.data-table tfoot tr { background: rgba(45,90,63,0.08); }
+.data-table tfoot td {
+  padding: 0.75rem 1rem; font-weight: 600; color: var(--green-mid);
+  font-size: 0.82rem; border-top: 1px solid var(--green-pale);
+}
+.num-right { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ── SCENARIOS ───────────────────────────── */
+.scenario-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  margin: 1.5rem 0; border: 1px solid var(--ltgray);
+}
+.scenario-col { }
+.scenario-header {
+  padding: 0.75rem 1rem;
+  font-size: 0.54rem; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: rgba(255,255,255,0.8);
+  background: var(--green-deep);
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.scenario-header.highlight { background: var(--green-mid); }
+.scenario-row {
+  padding: 0.6rem 1rem; font-size: 0.76rem; font-weight: 300;
+  color: #444; border-right: 1px solid var(--ltgray);
+  border-bottom: 1px solid var(--ltgray);
+}
+.scenario-row.label { color: var(--gray); font-size: 0.7rem; }
+.scenario-row.value-big {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 400; color: var(--green-mid);
+}
+.scenario-col:last-child .scenario-header,
+.scenario-col:last-child .scenario-row { border-right: none; }
+
+/* ── VALUATION ─────────────────────────── */
+.valuation-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
+  margin: 1.5rem 0;
+}
+.val-item {
+  padding: 1.2rem; border: 1px solid var(--ltgray);
+  margin: -1px 0 0 -1px;
+}
+.val-method {
+  font-size: 0.54rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gray); margin-bottom: 0.3rem;
+}
+.val-desc { font-size: 0.7rem; color: #666; margin-bottom: 0.5rem; line-height: 1.4; }
+.val-result {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 400; color: var(--green-mid);
+}
+
+.hero-faixa {
+  background: var(--green-deep); color: var(--white);
+  padding: 1.5rem 1.75rem; margin: 1.5rem 0;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem;
+}
+.hero-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 300;
+  color: var(--white); white-space: nowrap;
+}
+.hero-desc {
+  font-size: 0.8rem; color: rgba(255,255,255,0.65);
+  line-height: 1.6; font-weight: 300;
+}
+
+/* ── RETORNO TABLE ────────────────────── */
+.retorno-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.78rem; }
+.retorno-table th {
+  padding: 0.65rem 1rem; background: var(--green-deep);
+  color: rgba(255,255,255,0.8); font-size: 0.52rem;
+  font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  text-align: right;
+}
+.retorno-table th:first-child { text-align: left; }
+.retorno-table td {
+  padding: 0.65rem 1rem; border-bottom: 1px solid var(--cream-dark);
+  color: #444; font-weight: 300; text-align: right;
+}
+.retorno-table td:first-child { text-align: left; font-weight: 500; color: var(--charcoal); }
+.retorno-table tr:last-child td {
+  background: rgba(45,90,63,0.08); font-weight: 600;
+  color: var(--green-mid); border-top: 1px solid var(--green-pale);
+}
+
+/* ── RISCO TABLE ──────────────────────── */
+.risk-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+.risk-table thead th {
+  padding: 0.65rem 1rem; background: var(--green-deep);
+  color: rgba(255,255,255,0.8); font-size: 0.52rem;
+  font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  text-align: left;
+}
+.risk-table td {
+  padding: 0.75rem 1rem; border-bottom: 1px solid var(--cream-dark);
+  font-size: 0.78rem; color: #444; font-weight: 300; line-height: 1.5; vertical-align: top;
+}
+.risk-table td:first-child { font-weight: 500; color: var(--charcoal); width: 42%; }
+.risk-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+
+/* ── PRÓXIMOS PASSOS ───────────────────── */
+.steps-list { list-style: none; counter-reset: step; margin: 1.25rem 0; }
+.steps-list li {
+  counter-increment: step;
+  display: flex; gap: 1rem; align-items: flex-start;
+  padding: 0.75rem 0; border-bottom: 1px solid var(--ltgray);
+  font-size: 0.82rem; color: #444; font-weight: 300; line-height: 1.6;
+}
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 400; color: var(--green-soft);
+  flex-shrink: 0; line-height: 1.3; min-width: 1.8rem;
+}
+
+/* SCP boxes */
+.scp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1.5rem 0; }
+.scp-box {
+  padding: 1.5rem; border: 1px solid var(--ltgray);
+  margin: -1px 0 0 -1px;
+}
+.scp-role {
+  font-size: 0.56rem; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--green-mid); margin-bottom: 0.5rem;
+}
+.scp-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 400; color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+.scp-desc { font-size: 0.78rem; color: #555; line-height: 1.6; font-weight: 300; }
+
+.fatia-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; margin: 1.25rem 0; }
+.fatia-item {
+  padding: 1rem; border: 1px solid var(--ltgray);
+  margin: -1px 0 0 -1px; text-align: center;
+}
+.fatia-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 400; color: var(--charcoal);
+  margin-bottom: 0.2rem;
+}
+.fatia-inv {
+  font-size: 0.72rem; color: var(--green-mid); font-weight: 600; margin-bottom: 0.2rem;
+}
+.fatia-fund { font-size: 0.7rem; color: var(--gray); }
+
+.callout {
+  border-left: 3px solid var(--green-soft);
+  background: var(--green-pale); opacity: 0.8;
+  padding: 1rem 1.2rem; margin: 1.5rem 0;
+  font-size: 0.82rem; color: var(--charcoal); line-height: 1.7; font-weight: 400;
+  font-style: italic;
+}
+.callout .source { font-size: 0.68rem; color: var(--gray); font-style: normal; font-weight: 300; margin-top: 0.4rem; display: block; }
+
+.obs { font-size: 0.72rem; color: var(--gray); line-height: 1.6; margin-top: 1rem; font-weight: 300; }
+
+/* RESPONSIVE */
+@media (max-width: 680px) {
+  .wrapper { margin: 0; gap: 2px; }
+  .page-inner, .cover-inner { padding: 1.75rem 1.2rem 1.5rem; }
+  .two-col, .scp-grid, .valuation-grid { grid-template-columns: 1fr; }
+  .metrics-hero { grid-template-columns: 1fr; }
+  .metric-block { border-right: none; border-bottom: 1px solid var(--ltgray); }
+  .scenario-grid { grid-template-columns: 1fr 1fr; }
+  .cover-grid { grid-template-columns: 1fr; }
+  .fatia-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">S I M E</div>
+  <a href="#capa">Capa</a>
+  <a href="#marca">A Marca</a>
+  <a href="#essencial">Essencial</a>
+  <a href="#negocio">O Negócio</a>
+  <a href="#mercado">Mercado</a>
+  <a href="#numeros">Números</a>
+  <a href="#viabilidade">Viabilidade</a>
+  <a href="#ano1">Ano 1</a>
+  <a href="#maturidade">Maturidade</a>
+  <a href="#valuation">Valuation</a>
+  <a href="#proposta">A Proposta</a>
+  <a href="#retorno">Retorno</a>
+  <a href="#riscos">Riscos</a>
+</nav>
+
+<div class="wrapper">
+
+<!-- ══════════════════════════════════════════════════════════
+     CAPA
+══════════════════════════════════════════════════════════ -->
+<div id="capa" class="page page--cover">
+  <div class="cover-inner">
+    <div class="cover-eyebrow">S I M E  ·  C E N T R O  D E  S A Ú D E  I N T E G R A D A  D E  M U L T I E S P E C I A L I D A D E S</div>
+    <div class="cover-sime">SIME</div>
+    <div class="cover-subtitle">Centro de Saúde Integrada de Multiespecialidades</div>
+    <h1 class="cover-title">Proposta ao Investidor</h1>
+    <p class="cover-desc">Um centro de saúde integrada em um vazio de mercado mapeado, com o projeto pronto para abrir. O convite para entrar no capital de partida.</p>
+    <p style="font-size:0.78rem;color:rgba(255,255,255,0.35);font-style:italic;margin-bottom:2.5rem">Cuidado por inteiro</p>
+    <div class="cover-rule"></div>
+    <div class="cover-grid">
+      <div class="cover-item">
+        <div class="cover-label">Negócio</div>
+        <div class="cover-value">Centro de saúde integrada de multiespecialidades (psicologia, nutrição, terapia ocupacional, fonoaudiologia, psiquiatria e neuropsicologia)</div>
+      </div>
+      <div class="cover-item">
+        <div class="cover-label">Local</div>
+        <div class="cover-value">Av. Eta Gavião, 1187-B · Ancuri, Fortaleza (CE), na divisa com Itaitinga</div>
+      </div>
+      <div class="cover-item">
+        <div class="cover-label">Inauguração</div>
+        <div class="cover-value"><span class="cover-highlight">Setembro de 2026</span></div>
+      </div>
+      <div class="cover-item">
+        <div class="cover-label">Aporte proposto</div>
+        <div class="cover-value"><span class="cover-highlight">R$ 103.500</span> · participação de 25% a 30% via SCP</div>
+      </div>
+    </div>
+    <div class="cover-footer">
+      <span>Documento de negociação · Fortaleza, CE · Julho de 2026</span>
+      <span>Base: branding, pesquisa, CAPEX, OPEX, DRE e valuation concluídos</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 2 · A MARCA E O CONCEITO
+══════════════════════════════════════════════════════════ -->
+<div id="marca" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">A Marca e o Conceito</div>
+    <h2 class="section-heading">O que é a SIME</h2>
+    <div class="section-rule"></div>
+    <p class="section-body">A SIME é um centro de saúde integrada que reúne, em um só endereço, várias especialidades do cuidado: psicologia, nutrição, terapia ocupacional, fonoaudiologia, psiquiatria e neuropsicologia.</p>
+    <p class="section-body">O nome tem duas origens ao mesmo tempo. No papel, é a sigla de Saúde Integrada de Multiespecialidades. Na vida real, é o nome da mãe da fundadora, Sarah. A coincidência virou homenagem, e a homenagem colocou família e cuidado na raiz do negócio.</p>
+    <p class="section-body">A escolha de <em>centro</em>, no lugar de <em>clínica</em>, é deliberada: afasta a marca de redes de nome parecido e abre espaço para tudo que a SIME pretende ser além dos consultórios — as salas de parceiros, o projeto social e, mais adiante, práticas como equinoterapia e yoga. O conceito criativo da marca é <strong>a clareira</strong>: o ponto de luz dentro da mata, um espaço biofílico, com madeira clara, verde e luz quente, pensado para acolher. Um lugar que não parece consultório.</p>
+
+    <div class="two-col" style="margin-top:1.75rem">
+      <div class="block-item">
+        <div class="block-label">Integração real</div>
+        <div class="block-body">Prontuário compartilhado, encaminhamento entre profissionais e plano de cuidado construído em conjunto. Não é um endereço em comum: é uma equipe que conversa entre si.</div>
+      </div>
+      <div class="block-item">
+        <div class="block-label">Uma marca, duas frentes</div>
+        <div class="block-body">Para o paciente (B2C), a promessa é cuidado humano e integrado perto de casa. Para o profissional (B2B), é um consultório pronto, com estrutura premium e demanda: a sublocação de salas é o futuro carro-chefe da receita.</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      "A SIME é um centro de saúde integrada no Ancuri que reúne psicologia, nutrição, psiquiatria e outras especialidades em um espaço projetado com natureza e acolhimento. Aqui os profissionais trabalham juntos de verdade, com prontuário compartilhado e plano de cuidado conjunto. E o projeto social Braços Abertos leva atendimento a quem mais precisa. Cuidado, para a gente, é coisa de família."
+    </div>
+
+    <p class="section-body" style="margin-top:1rem"><strong>Por que isso importa para o investidor.</strong> A marca, o posicionamento, a pesquisa e o projeto pronto são ativos que já existem antes da primeira sala ser alugada. O investidor não entra em uma ideia: entra em um negócio instruído, com identidade definida e um conceito difícil de copiar, porque atmosfera, integração clínica e a história do nome levam tempo e cultura para serem replicados.</p>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 1</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 3 · O ESSENCIAL EM UMA PÁGINA
+══════════════════════════════════════════════════════════ -->
+<div id="essencial" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">O Essencial em uma Página</div>
+    <h2 class="section-heading">A oportunidade, sem rodeios</h2>
+    <div class="section-rule"></div>
+    <p class="section-body">A SIME tem três fontes de receita: a agenda clínica da própria fundadora, o aluguel de consultórios para outros profissionais e um programa social pago por empresas. Tudo isso em uma região de Fortaleza onde a pesquisa não encontrou concorrência direta em terapias no raio de 5 km. O projeto está pronto para abrir; o que falta é o capital de partida.</p>
+
+    <div class="metrics-hero">
+      <div class="metric-block">
+        <div class="metric-num">R$ 103,5 mil</div>
+        <div class="metric-label">aporte que abre a operação<br><strong>(cobre 100% do investimento inicial recomendado, com reserva de 6 meses)</strong></div>
+      </div>
+      <div class="metric-block">
+        <div class="metric-num">Mês 2</div>
+        <div class="metric-label">resultado mensal já positivo no cenário base<br><strong>(algo raro em negócio recém-aberto)</strong></div>
+      </div>
+      <div class="metric-block">
+        <div class="metric-num">~2,0x</div>
+        <div class="metric-label">retorno do investidor em 5 anos<br><strong>(com distribuição preferencial e risco limitado ao aporte)</strong></div>
+      </div>
+    </div>
+
+    <div class="section-title" style="margin-top:1.5rem">Por que este negócio se sustenta</div>
+    <ul class="bullets-list">
+      <li><strong>A fundadora já gera caixa no dia 1.</strong> Sarah é psicóloga em atividade. A agenda clínica dela ancora a receita do primeiro ano, enquanto o aluguel de salas ainda está sendo vendido.</li>
+      <li><strong>Receita que se diversifica.</strong> A partir do Ano 2, o aluguel de salas assume a maior fatia e reduz a dependência de qualquer pessoa. O negócio deixa de depender só da Sarah.</li>
+      <li><strong>Vazio competitivo real.</strong> Ausência de clínicas de terapias no entorno, com um corredor de renda a caminho (Messejana e Eusébio, a primeira do estado).</li>
+      <li><strong>Projeto instruído.</strong> Branding, pesquisa, CAPEX, OPEX, DRE e valuation concluídos: números auditáveis, não uma promessa.</li>
+    </ul>
+
+    <div class="hero-faixa">
+      <div>
+        <div style="font-size:0.54rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.4rem">O convite, em uma frase</div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.8);line-height:1.7;font-weight:300">Você entra com os R$ 103.500 que abrem a SIME, recebe uma fatia preferencial do lucro por cinco anos, recupera o aporte com ganho, e ao fim do prazo a sociedade se encerra sozinha. Sua exposição se limita ao valor aportado.</p>
+      </div>
+    </div>
+
+    <p class="obs">Os números de retorno são projeções fundamentadas nas premissas do projeto, não garantias. A premissa de volume da agenda clínica está declarada na página da maturidade. Ressalvas completas na página final.</p>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 2</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 4 · O NEGÓCIO
+══════════════════════════════════════════════════════════ -->
+<div id="negocio" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">O Negócio</div>
+    <h2 class="section-heading">Três fontes de receita, um só espaço</h2>
+    <div class="section-rule"></div>
+    <p class="section-body">A SIME ocupa um vão comercial reformado em três consultórios insonorizados. Esse mesmo espaço gera receita de três maneiras, que se equilibram e se revezam ao longo do tempo.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Fonte de receita</th>
+          <th>Como funciona</th>
+          <th class="num-right">Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Consultas da Sarah</td>
+          <td>A fundadora atende os próprios pacientes. Receita de alta margem, o motor do primeiro ano.</td>
+          <td class="num-right">R$ 150 / sessão</td>
+        </tr>
+        <tr>
+          <td>Sublocação de salas</td>
+          <td>Outros profissionais alugam turnos fixos. Escalável e previsível, vira a maior fatia a partir do Ano 2.</td>
+          <td class="num-right">R$ 275 / turno-mês</td>
+        </tr>
+        <tr>
+          <td>Braços Abertos</td>
+          <td>Programa social: terapia paga por empresas para colaboradores, resposta à norma NR-1.</td>
+          <td class="num-right">R$ 120 / sessão<br>R$ 100 no online</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-title" style="margin-top:1.5rem">A virada de composição: da fundadora para a escala</div>
+    <p class="section-body">Este é o coração do modelo. No Ano 1, a agenda da Sarah responde por quase metade da receita e segura o negócio enquanto as salas enchem. Do Ano 2 em diante, a sublocação assume a maioria, e a SIME passa a crescer sem depender do tempo de uma só pessoa. Nos Anos 3 e seguintes, os laudos de avaliação entram como camada extra de alta margem.</p>
+    <p class="obs">Composição da receita média mensal por ano. A sublocação parte de uma base pequena e se torna a maior fatia a partir do Ano 2.</p>
+    <p class="section-body" style="margin-top:1rem"><strong>Por que isso importa para o investidor.</strong> Um negócio que depende de uma única pessoa é frágil. A SIME começa apoiada na Sarah, o que é seguro porque ela já tem pacientes, e migra para uma receita distribuída entre muitos profissionais. O risco cai com o tempo, não sobe.</p>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 3</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 5 · O MERCADO
+══════════════════════════════════════════════════════════ -->
+<div id="mercado" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">O Mercado</div>
+    <h2 class="section-heading">Demanda em alta, e nenhum centro integrado no raio</h2>
+    <div class="section-rule"></div>
+    <p class="section-body">A tese da SIME se apoia em dois fatos que a pesquisa confirmou. A demanda por saúde mental está em máxima histórica. E, embora existam consultórios de psicologia na região, eles são isolados e em geral voltados ao público infantil: o que não existe no raio de 5 km é um centro que integre várias especialidades em um só lugar. É esse espaço que a SIME ocupa.</p>
+
+    <div class="metrics-hero" style="margin:1.5rem 0">
+      <div class="metric-block">
+        <div class="metric-num">+68%</div>
+        <div class="metric-label"><strong>alta dos afastamentos por transtorno mental no INSS</strong><br>472 mil casos em 2024, recorde histórico</div>
+      </div>
+      <div class="metric-block">
+        <div class="metric-num">Nenhum</div>
+        <div class="metric-label"><strong>centro integrado multidisciplinar no raio de 5 km</strong><br>a concorrência é de consultórios isolados</div>
+      </div>
+      <div class="metric-block">
+        <div class="metric-num">2.625</div>
+        <div class="metric-label"><strong>pacientes pagantes potenciais só no bairro</strong><br>após cortes conservadores (ver funil)</div>
+      </div>
+    </div>
+
+    <div class="section-title">Quem já atende na região</div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Oferta que já existe por perto</th>
+          <th>O que significa para a SIME</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PsicoCrescer (Itaitinga), psicologia infantil</td>
+          <td>Concorrente no nicho infantil; e referência de preço da sublocação, aluga turno a R$ 180</td>
+        </tr>
+        <tr>
+          <td>Centro Estímulos e Desenvolvimento e outros de foco infantil</td>
+          <td>Ocupam o público infantil; a SIME se diferencia focando adolescentes e adultos</td>
+        </tr>
+        <tr>
+          <td>Psicólogos autônomos em Ancuri, Pedras e Paupina</td>
+          <td>Atendem sem estrutura de centro; são, ao mesmo tempo, clientes potenciais da sublocação</td>
+        </tr>
+        <tr>
+          <td>Rede pública (CIRI, Frotinha, CER) e clínicas populares em Messejana</td>
+          <td>Absorvem quem não paga ou busca consulta rápida; não competem no particular continuado</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="obs">Funil de demanda potencial no raio de 5 km (Ancuri e entorno). Filtros: 75% com 15 anos ou mais, 5% em terapia continuada, 40% pagando particular presencial.</p>
+
+    <p class="section-body" style="margin-top:1rem"><strong>Como a SIME se posiciona.</strong> Ela não disputa o nicho infantil já ocupado: foca adolescentes e adultos, com atendimento multidisciplinar integrado, algo que nenhum concorrente da região oferece. Os consultórios isolados são, ao mesmo tempo, referência de preço e clientes potenciais da sublocação: a SIME entra entre R$ 250 e R$ 300 por turno, contra os R$ 180 da PsicoCrescer. Ela compete por estrutura e integração, não por preço.</p>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 4</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 6 · OS NÚMEROS — INVESTIMENTO E CUSTO
+══════════════════════════════════════════════════════════ -->
+<div id="numeros" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">Os Números · Investimento e Custo</div>
+    <h2 class="section-heading">Quanto custa abrir e quanto custa rodar</h2>
+    <div class="section-rule"></div>
+
+    <div class="section-title">O investimento inicial (CAPEX): R$ 103.500</div>
+    <p class="section-body" style="margin-bottom:1rem">O aporte de R$ 103.500 foi dimensionado para cobrir exatamente o investimento inicial recomendado, já com reserva de caixa para 6 meses de operação. Cada real tem destino definido:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Aplicação do aporte</th>
+          <th class="num-right">Valor</th>
+          <th>O que entrega</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reforma das 3 salas</td>
+          <td class="num-right">R$ 24 a 30 mil</td>
+          <td>Drywall acústico entre salas (sigilo)</td>
+        </tr>
+        <tr>
+          <td>Mobiliário e equipamentos</td>
+          <td class="num-right">R$ 22 a 29 mil</td>
+          <td>Salas prontas para atender</td>
+        </tr>
+        <tr>
+          <td>Abertura e registros</td>
+          <td class="num-right">R$ 5,5 mil</td>
+          <td>CNPJ, marca no INPI, licenças</td>
+        </tr>
+        <tr>
+          <td>Marketing de lançamento</td>
+          <td class="num-right">R$ 5 a 9 mil</td>
+          <td>Identidade, site, inauguração</td>
+        </tr>
+        <tr>
+          <td>Capital de giro (reserva 6 meses)</td>
+          <td class="num-right">R$ 21 a 30 mil</td>
+          <td>Fôlego dos primeiros meses</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total recomendado</td>
+          <td class="num-right">R$ 103.500</td>
+          <td>Enxuto R$ 75.500 · Plano B R$ 131.000</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="section-title">O custo mensal (OPEX): R$ 6.149 na fase inicial</div>
+    <p class="section-body" style="margin-bottom:1rem">Enquanto a fundadora cobre a recepção como sócia, o custo fixo mensal, já incluindo o pró-labore mínimo dela, fica em cerca de R$ 6.149. A fase 2, com recepcionista contratada, só é acionada quando o faturamento passa de R$ 12 mil.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Composição do custo mensal</th>
+          <th class="num-right">Fase 1</th>
+          <th class="num-right">Fase 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Despesas operacionais (aluguel, energia, marketing, contabilidade, limpeza, software)</td>
+          <td class="num-right">R$ 4.528</td>
+          <td class="num-right">R$ 6.928</td>
+        </tr>
+        <tr>
+          <td>Pró-labore da fundadora (1 salário mínimo)</td>
+          <td class="num-right">R$ 1.621</td>
+          <td class="num-right">R$ 1.621</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Custo fixo total</td>
+          <td class="num-right">R$ 6.149</td>
+          <td class="num-right">R$ 8.549</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="hero-faixa">
+      <div>
+        <div style="font-size:0.54rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.4rem">Um dado que muda tudo</div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.8);line-height:1.7;font-weight:300">Só a agenda clínica da Sarah gera cerca de <strong style="color:#fff">R$ 5.800 por mês</strong>. As consultas dela sozinhas já cobrem quase todo o custo fixo da fase inicial. Cada sala alugada e cada cota do Braços Abertos entram, na prática, como lucro.</p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 5</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 7 · ANÁLISE — VIABILIDADE
+══════════════════════════════════════════════════════════ -->
+<div id="viabilidade" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">Análise · Viabilidade</div>
+    <h2 class="section-heading">O ponto de equilíbrio, no pior caso</h2>
+    <div class="section-rule"></div>
+    <p class="section-body">Um teste de estresse honesto: imagine que a Sarah não atendesse nenhum paciente próprio e a receita viesse só do aluguel de salas. Quantos turnos cobririam o custo? A resposta é 23, de uma capacidade de 51 turnos por semana.</p>
+
+    <div class="metrics-hero" style="margin:1.75rem 0">
+      <div class="metric-block">
+        <div class="metric-num">23 de 51</div>
+        <div class="metric-label"><strong>turnos cobririam tudo</strong><br>mesmo se a receita fosse só de aluguel. É o piso de segurança do negócio.</div>
+      </div>
+      <div class="metric-block">
+        <div class="metric-num">Na prática, menos</div>
+        <div class="metric-label"><strong>como a agenda da Sarah já cobre quase todo o custo fixo</strong><br>bastam poucos turnos alugados para o negócio virar lucro.</div>
+      </div>
+      <div class="metric-block">
+        <div class="metric-num">R$ 275</div>
+        <div class="metric-label"><strong>por turno-mês</strong><br>cada sala alugada acima do equilíbrio entra diretamente como resultado positivo.</div>
+      </div>
+    </div>
+
+    <p class="section-body"><strong>Leitura analítica.</strong> O equilíbrio real chega muito antes dos 23 turnos, porque as consultas da Sarah e o Braços Abertos entram por cima. O gráfico mostra o piso; a operação parte de um patamar mais confortável. O modelo é conservador por construção.</p>
+
+    <p class="obs">A capacidade de 51 turnos por semana vem de 3 salas × (5 dias úteis com 3 turnos, manhã, tarde e noite, + sábado com 2 turnos). Um mesmo profissional costuma alugar vários turnos por semana, então 23 turnos equivalem a menos da metade da capacidade.</p>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 6</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 8 · ANÁLISE — PRIMEIRO ANO
+══════════════════════════════════════════════════════════ -->
+<div id="ano1" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">Análise · Primeiro Ano</div>
+    <h2 class="section-heading">A rampa da sublocação e o resultado do Ano 1</h2>
+    <div class="section-rule"></div>
+    <p class="section-body">Sublocar salas leva tempo: cada turno é uma venda. Enquanto essa rampa sobe, a agenda da Sarah sustenta a receita, o que permite que o primeiro ano já feche no positivo mesmo no cenário base.</p>
+
+    <div class="section-title" style="margin-top:1.5rem">Somando as três fontes de receita, o primeiro ano fecha assim:</div>
+
+    <div class="scenario-grid">
+      <div class="scenario-col">
+        <div class="scenario-header">Indicador</div>
+        <div class="scenario-row label">Receita do ano</div>
+        <div class="scenario-row label">Resultado do ano</div>
+        <div class="scenario-row label">Resultado mensal positivo</div>
+        <div class="scenario-row label">Turnos sublocados no mês 12</div>
+      </div>
+      <div class="scenario-col">
+        <div class="scenario-header">Conservador</div>
+        <div class="scenario-row">R$ 136.534</div>
+        <div class="scenario-row">R$ 22.959</div>
+        <div class="scenario-row">Mês 3</div>
+        <div class="scenario-row">20 turnos</div>
+      </div>
+      <div class="scenario-col">
+        <div class="scenario-header highlight">Base</div>
+        <div class="scenario-row value-big">R$ 155.509</div>
+        <div class="scenario-row value-big">R$ 40.701</div>
+        <div class="scenario-row" style="color:var(--green-mid);font-weight:500">Mês 2</div>
+        <div class="scenario-row" style="color:var(--green-mid);font-weight:500">26 turnos</div>
+      </div>
+      <div class="scenario-col">
+        <div class="scenario-header">Otimista</div>
+        <div class="scenario-row">R$ 183.334</div>
+        <div class="scenario-row">R$ 61.917</div>
+        <div class="scenario-row">Mês 1</div>
+        <div class="scenario-row">36 turnos</div>
+      </div>
+    </div>
+
+    <p class="section-body" style="margin-top:1.25rem">Todos os cenários fecham o primeiro ano no positivo, algo raro em um negócio recém-aberto. O motivo é a agenda clínica da Sarah, que gera caixa de alta margem desde o mês 1, enquanto a sublocação amadurece.</p>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 7</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 9 · ANÁLISE — MATURIDADE
+══════════════════════════════════════════════════════════ -->
+<div id="maturidade" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">Análise · Maturidade</div>
+    <h2 class="section-heading">Para onde o negócio caminha</h2>
+    <div class="section-rule"></div>
+    <p class="section-body">Passada a fase de ocupação, a SIME estabiliza e o lucro cresce em degraus. No Ano 2, a sublocação vira a maior fatia; no Ano 3 entram os laudos de avaliação neuropsicológica e de TEA, serviço de reputação e alta margem que só faz sentido com a marca madura.</p>
+
+    <table class="data-table" style="margin-top:1.5rem">
+      <thead>
+        <tr>
+          <th>Horizonte</th>
+          <th class="num-right">Lucro líquido / mês</th>
+          <th>Composição da receita</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ano 1 (base, média mensal)</td>
+          <td class="num-right">R$ 3.392</td>
+          <td>Sarah 45% · sublocação 30% · Braços 25%</td>
+        </tr>
+        <tr>
+          <td>Ano 2 (sublocação assume)</td>
+          <td class="num-right" style="color:var(--green-mid);font-weight:600">R$ 8.177</td>
+          <td>Sublocação 51% · Sarah 26% · Braços 23%</td>
+        </tr>
+        <tr>
+          <td>Ano 3 em diante (maturidade)</td>
+          <td class="num-right" style="color:var(--green-mid);font-weight:600">R$ 10.047</td>
+          <td>Sublocação + Sarah + Braços + laudos</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="hero-faixa" style="margin-top:1.75rem">
+      <div>
+        <div style="font-size:0.54rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.4rem">Premissa da agenda clínica da Sarah (declarada)</div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.75);line-height:1.7;font-weight:300">O modelo assume que a Sarah atende cerca de 9 pacientes por semana (aproximadamente 2 turnos próprios) a R$ 150 por sessão, desde a abertura. É um volume confortável, compatível com ela também administrar a clínica no início. A partir do Ano 2, esse volume é mantido enquanto a sublocação cresce e assume a maioria. <strong style="color:#fff">Este é o principal parâmetro ajustável do modelo:</strong> se a Sarah atender mais ou menos, os resultados sobem ou descem proporcionalmente.</p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 8</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 10 · QUANTO VALE A SIME
+══════════════════════════════════════════════════════════ -->
+<div id="valuation" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">Quanto Vale a SIME</div>
+    <h2 class="section-heading">O valor antes de abrir as portas</h2>
+    <div class="section-rule"></div>
+    <p class="section-body">Valuation é estimar quanto vale o negócio. Não existe um número único: o valor aparece como uma faixa, construída por três métodos aceitos no mercado que se conferem entre si. Quando os três apontam para a mesma região, a estimativa fica sólida.</p>
+
+    <div class="valuation-grid">
+      <div class="val-item">
+        <div class="val-method">Patrimonial</div>
+        <div class="val-desc">Só os bens montados (o piso)</div>
+        <div class="val-result">R$ 103.500</div>
+      </div>
+      <div class="val-item">
+        <div class="val-method">Múltiplo de lucro</div>
+        <div class="val-desc">2 a 3 vezes o lucro de maturidade</div>
+        <div class="val-result">R$ 241.122 a 361.683</div>
+      </div>
+      <div class="val-item">
+        <div class="val-method">Fluxo de caixa (DCF)</div>
+        <div class="val-desc">O caixa futuro trazido para hoje</div>
+        <div class="val-result">R$ 353.414 a 503.342</div>
+      </div>
+    </div>
+
+    <p class="section-body">Triangulando os três, com mais peso para o múltiplo de mercado e para o DCF na taxa conservadora, a SIME se posiciona numa faixa de valor antes do aporte (pré-money):</p>
+
+    <div class="hero-faixa">
+      <div>
+        <div style="font-size:0.54rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.3rem">Faixa de valor justo (pré-money)</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:#fff;margin-bottom:0.2rem">R$ 300 a 390 mil</div>
+        <div style="font-size:0.8rem;color:rgba(255,255,255,0.55)">Ponto central da faixa: <strong style="color:rgba(255,255,255,0.8)">~R$ 345 mil</strong></div>
+      </div>
+    </div>
+
+    <p class="section-body"><strong>A ponte com a proposta.</strong> A entrada oferecida ao investidor (pré-money de R$ 238 mil a R$ 306 mil, que dão 30% e 25% de participação) fica abaixo do valor justo estimado. Essa diferença é o desconto de entrada que compensa o risco de um negócio recém-aberto e torna o convite atraente. A âncora do valor é o múltiplo de mercado: a SIME projeta cerca de R$ 120 mil de lucro por ano na maturidade, e negócios de serviço local valem de 2 a 3 vezes o lucro anual.</p>
+
+    <p class="obs">O DCF completo, a análise de sensibilidade da taxa de desconto e a expansão do Ano 5 (equinoterapia e wellness) estão detalhados no documento de Valuation em anexo ao projeto.</p>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 9</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 11 · A PROPOSTA
+══════════════════════════════════════════════════════════ -->
+<div id="proposta" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">A Proposta</div>
+    <h2 class="section-heading">Como o investidor entra</h2>
+    <div class="section-rule"></div>
+
+    <div class="metrics-hero" style="margin-bottom:1.75rem">
+      <div class="metric-block">
+        <div class="metric-num">R$ 103,5 mil</div>
+        <div class="metric-label"><strong>aporte único</strong><br>que abre a operação</div>
+      </div>
+      <div class="metric-block">
+        <div class="metric-num">25% a 30%</div>
+        <div class="metric-label"><strong>participação no lucro</strong><br>fundadoras sempre majoritárias</div>
+      </div>
+      <div class="metric-block">
+        <div class="metric-num">5 anos</div>
+        <div class="metric-label"><strong>prazo</strong><br>com encerramento automático ao fim</div>
+      </div>
+    </div>
+
+    <div class="section-title">De onde sai o percentual</div>
+    <p class="section-body" style="margin-bottom:1rem">A fatia do investidor sai de uma conta direta entre o valor aportado e quanto a SIME vale antes de o dinheiro entrar. Quanto mais alta a avaliação de partida, menor a fatia que o mesmo aporte compra:</p>
+
+    <div class="fatia-grid">
+      <div class="fatia-item" style="background:rgba(45,90,63,0.05)">
+        <div style="font-size:0.56rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);margin-bottom:0.5rem">Avaliação pré-money</div>
+      </div>
+      <div class="fatia-item">
+        <div class="fatia-val">R$ 238.000</div>
+        <div class="fatia-inv">Teto de concessão</div>
+        <div class="fatia-fund" style="margin-top:0.4rem">Investidor: 30% · Fundadoras: 70%</div>
+      </div>
+      <div class="fatia-item">
+        <div class="fatia-val">R$ 306.000</div>
+        <div class="fatia-inv">Abertura da negociação</div>
+        <div class="fatia-fund" style="margin-top:0.4rem">Investidor: 25% · Fundadoras: 75%</div>
+      </div>
+    </div>
+
+    <div class="section-title" style="margin-top:1.5rem">O formato jurídico: SCP</div>
+    <p class="section-body" style="margin-bottom:1rem">A entrada se dá por uma Sociedade em Conta de Participação (Código Civil, artigos 991 a 996): alguém entra com capital e participa do lucro, sem administrar a operação nem figurar publicamente como dono.</p>
+
+    <div class="scp-grid">
+      <div class="scp-box">
+        <div class="scp-role">Sarah · Sócia Ostensiva</div>
+        <div class="scp-desc">Conduz o negócio, atende, assina contratos e responde pela operação. Para o mundo externo, a SIME continua sendo dela.</div>
+      </div>
+      <div class="scp-box">
+        <div class="scp-role">O Investidor · Sócio Participante</div>
+        <div class="scp-desc">Entra com os R$ 103.500, tem direito ao percentual do lucro, mas não administra e não aparece no contrato social público.</div>
+      </div>
+    </div>
+
+    <ul class="bullets-list" style="margin-top:0.75rem">
+      <li><strong>Risco limitado ao aporte:</strong> o investidor não responde pelas dívidas da SIME perante terceiros.</li>
+      <li><strong>Encerramento limpo:</strong> ao fim dos 5 anos a participação se encerra sozinha, sem dissolução nem recompra.</li>
+    </ul>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 10</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 12 · O RETORNO
+══════════════════════════════════════════════════════════ -->
+<div id="retorno" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">O Retorno</div>
+    <h2 class="section-heading">Quanto o investidor recebe, e quando</h2>
+    <div class="section-rule"></div>
+    <p class="section-body">A proposta usa uma distribuição preferencial: até recuperar os R$ 103.500, o investidor recebe 50% do lucro distribuído; depois, a fatia volta ao percentual contratado (30%). As fundadoras são sempre majoritárias.</p>
+
+    <table class="retorno-table">
+      <thead>
+        <tr>
+          <th>Ano</th>
+          <th>Lucro da SIME</th>
+          <th>Recebe o investidor</th>
+          <th>Acumulado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ano 1</td>
+          <td>R$ 40.701</td>
+          <td>R$ 20.350 (50%)</td>
+          <td>R$ 20.350</td>
+        </tr>
+        <tr>
+          <td>Ano 2</td>
+          <td>R$ 98.121</td>
+          <td>R$ 49.060 (50%)</td>
+          <td>R$ 69.411</td>
+        </tr>
+        <tr>
+          <td style="color:var(--green-mid);font-weight:600">Ano 3 ✓ aporte recuperado</td>
+          <td>R$ 120.561</td>
+          <td>R$ 60.280 (50%)</td>
+          <td style="color:var(--green-mid);font-weight:600">R$ 129.691</td>
+        </tr>
+        <tr>
+          <td>Ano 4</td>
+          <td>R$ 120.561</td>
+          <td>R$ 36.168 (30%)</td>
+          <td>R$ 165.860</td>
+        </tr>
+        <tr>
+          <td>Ano 5</td>
+          <td>R$ 120.561</td>
+          <td>R$ 36.168 (30%)</td>
+          <td>R$ 202.028</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="metrics-hero" style="margin:1.5rem 0">
+      <div class="metric-block">
+        <div class="metric-num">Ano 3</div>
+        <div class="metric-label"><strong>aporte de R$ 103.500 recuperado</strong><br>(distribuição preferencial)</div>
+      </div>
+      <div class="metric-block">
+        <div class="metric-num">~R$ 202 mil</div>
+        <div class="metric-label"><strong>total recebido em 5 anos</strong></div>
+      </div>
+      <div class="metric-block">
+        <div class="metric-num">~2,0x</div>
+        <div class="metric-label"><strong>sobre o valor aportado</strong></div>
+      </div>
+    </div>
+
+    <p class="obs">Leitura honesta. No percentual simples (30%, sem aceleração) o retorno é de cerca de 1,5x em cinco anos. A SIME não é uma aposta prometendo multiplicar dez vezes: é participação no lucro de um negócio real, com risco limitado ao aporte, pagamento preferencial e retorno da ordem de 2x. Os resultados dependem da premissa de volume da agenda da Sarah.</p>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 11</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PÁG 13 · TRANSPARÊNCIA
+══════════════════════════════════════════════════════════ -->
+<div id="riscos" class="page page--section">
+  <div class="page-inner">
+    <div class="page-header">SIME · Centro de Saúde Integrada de Multiespecialidades</div>
+    <div class="section-title">Transparência</div>
+    <h2 class="section-heading">Riscos, mitigação e próximos passos</h2>
+    <div class="section-rule"></div>
+    <p class="section-body">Um bom investimento é aquele em que os riscos estão na mesa desde o começo. Estes são os da SIME, com o que já está sendo feito para reduzi-los:</p>
+
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Risco</th>
+          <th>Como é mitigado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dependência da Sarah no Ano 1: boa parte da receita inicial vem da agenda clínica dela</td>
+          <td>É temporário e planejado: a sublocação assume a maioria da receita já no Ano 2, distribuindo o negócio entre vários profissionais</td>
+        </tr>
+        <tr>
+          <td>O risco é comercial: vender turnos e cotas do Braços Abertos</td>
+          <td>Pré-venda de turnos âncora antes de abrir e tráfego pago gerido pela Rock Design, parceira de marketing, que barateia a captação</td>
+        </tr>
+        <tr>
+          <td>Enquadramento tributário (fator R do Simples) pode elevar a carga</td>
+          <td>Sinalizado para a contadora antes da abertura; o modelo já testa a sensibilidade</td>
+        </tr>
+        <tr>
+          <td>A SCP tem efeitos jurídicos específicos</td>
+          <td>Contrato desenhado e validado por advogado e contadora antes da assinatura</td>
+        </tr>
+        <tr>
+          <td>Valor exato do aporte (R$ 103.500 recomendado ou R$ 131.000 no Plano B)</td>
+          <td>Fechar o número com a contadora antes de assinar, conforme a reserva de caixa escolhida (6 ou 12 meses)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-title" style="margin-top:1.5rem">Próximos passos</div>
+    <ol class="steps-list">
+      <li>Validar a estrutura de SCP e a preferência na distribuição com contadora e advogado.</li>
+      <li>Busca formal no INPI (classe 44) e registro da marca antes da fachada.</li>
+      <li>Pré-venda de turnos âncora para acelerar a rampa de sublocação.</li>
+      <li>Fechar o CAPEX exato com três orçamentos de reforma e a licença sanitária.</li>
+      <li>Inauguração prevista para setembro de 2026.</li>
+    </ol>
+
+    <div class="hero-faixa" style="margin-top:1.75rem">
+      <div>
+        <div style="font-size:0.54rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.4rem">O que sustenta a confiança</div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.75);line-height:1.75;font-weight:300">A SIME começa apoiada em uma profissional que já tem pacientes e fecha o primeiro ano no positivo em todos os cenários. Com o tempo, o risco se dilui: a receita migra da fundadora para uma base ampla de profissionais, e o negócio deixa de depender de qualquer pessoa. O investidor entra com risco limitado ao aporte, retorno preferencial e uma saída limpa ao fim de cinco anos.</p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>SIME · Centro de Saúde Integrada de Multiespecialidades</span>
+      <span>Proposta ao Investidor · 12</span>
+    </div>
+  </div>
+</div>
+
+</div><!-- /.wrapper -->
+
+<script>
+const links = [...document.querySelectorAll('nav a')];
+const sections = [...document.querySelectorAll('[id]')];
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 56;
+  let cur = '';
+  sections.forEach(s => { if (s.offsetTop <= y) cur = s.id; });
+  links.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
